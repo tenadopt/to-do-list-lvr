@@ -11,27 +11,26 @@ type TaskType = {
     isDone: boolean
 }
 
-
 export function Todolist(props: PropsType) {
-
-
-
     return (
-    <div>
-        <h3>{props.title}</h3>
         <div>
-            <input/>
-            <button>+</button>
-        </div>
-        <div>
-            <div><input type="checkbox"/><span>{props.tasks[0].title}</span></div>
-            <div><input type="checkbox"/><span>{props.tasks[1].title}</span></div>
-            <div><input type="checkbox"/><span>{props.tasks[2].title}</span></div>
-        </div>
-        <div>
-            <button>All</button>
-            <button>Active</button>
-            <button>Completed</button>
-        </div>
-    </div>)
+            <h3>{props.title}</h3>
+            <div>
+                <input/>
+                <button>+</button>
+            </div>
+            <div>
+                {props.tasks.map((el) => (
+                    <div>
+                        <input type="checkbox"/>
+                        <span>{el.title}</span>
+                    </div>
+                    ))}
+            </div>
+            <div>
+                <button>All</button>
+                <button>Active</button>
+                <button>Completed</button>
+            </div>
+        </div>)
 }
