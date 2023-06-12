@@ -1,13 +1,11 @@
 import React from "react";
 import {FilterTasksType} from "./App";
 
-
 type PropsType = {
     title: string
     tasks: Array<TaskType>
     removeTask: (taskId: number) => void
     changeFilter: (value: FilterTasksType) => void
-
 }
 
 type TaskType = {
@@ -17,7 +15,6 @@ type TaskType = {
 }
 
 export function Todolist(props: PropsType) {
-
     return (
         <div>
             <h3>{props.title}</h3>
