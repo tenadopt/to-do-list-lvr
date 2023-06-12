@@ -1,10 +1,17 @@
 .App {
+
     padding: 30px;
     display: flex;
 }
 
 .App > div {
+    background-color: green;
     margin-right: 50px;
+    padding: 50px;
+}
+
+.list-tasks {
+    background-color: green;
 }
 
 .btn-filter-active {
@@ -21,4 +28,13 @@
 .task-isDone {
     font-weight: normal;
     text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.error {
+    border: red;
+}
+
+.error-message {
+    color: red;
 }
